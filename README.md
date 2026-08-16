@@ -75,3 +75,7 @@ cat >> README.md <<'EOF'
 
 The project structure keeps the source code and documentation organized for development and version control.
 EOF
+
+## Development Notes
+
+Student management functionality is organized into reusable components.
