@@ -79,3 +79,16 @@ EOF
 ## Development Notes
 
 Student management functionality is organized into reusable components.
+
+## Project Structure
+
+- `models/` — student data models
+- `StudentManager.*` — student management operations
+- `StudentSearch.*` — course-based student search
+- `AttendanceValidator.*` — attendance eligibility validation
+- `Login.*` — authentication component
+- `Profile.*` — student profile component
+- `Dashboard.*` — student dashboard component
+- `Settings.*` — portal settings
+- `build.sh` — build and clean commands
+- `test.sh` — basic application tests
