@@ -30,3 +30,29 @@ Run:
 
 ```bash
 cat README.md
+
+## Build Instructions
+
+Compile the project using a C++17-compatible compiler.
+
+For example, using `g++`:
+
+```bash
+g++ -std=c++17 main.cpp -o student-portal
+
+
+Save and close TextEdit.
+
+### 3. Commit it
+
+Back in Terminal, run these **exactly**:
+
+```bash
+git add README.md
+
+## Running the Application
+
+After compiling the source code, execute the generated program from the project directory:
+
+```bash
+./student-portal
