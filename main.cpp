@@ -1,29 +1,31 @@
 #include <iostream>
-#include <string>
+#include "StudentManager.h"
 
 void printWelcomeMessage() {
-    std::cout << "      Welcome to Git !       " << std::endl;
+    std::cout << "      Welcome to Student Portal      " << std::endl;
 }
 
-
-void greetUser() {
-    std::cout << "Hello, Developer!" << std::endl;
-}
-
-int addNumbers(int a, int b) {
-    return a + b;
+void displayStudent(const Student& student) {
+    std::cout << "ID: " << student.id << std::endl;
+    std::cout << "Name: " << student.name << std::endl;
+    std::cout << "Course: " << student.course << std::endl;
+    std::cout << "Attendance: " << student.attendance << "%" << std::endl;
 }
 
 int main() {
     printWelcomeMessage();
-    greetUser();
 
-    int num1 = 5;
-    int num2 = 10;
-    int result = addNumbers(num1, num2);
+    StudentManager manager;
 
-    std::cout << "The sum of " << num1 << " and " << num2 << " is: " << result << std::endl;
-    std::cout << "Program finished successfully." << std::endl;
+    manager.addStudent(Student(101, "Ananya", "Computer Science", 87.5));
+    manager.addStudent(Student(102, "Rahul", "Electronics", 91.0));
+
+    std::cout << "\nRegistered Students:\n" << std::endl;
+
+    for (const Student& student : manager.getStudents()) {
+        displayStudent(student);
+        std::cout << std::endl;
+    }
 
     return 0;
 }
