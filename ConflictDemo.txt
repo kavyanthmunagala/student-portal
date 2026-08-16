@@ -1,1 +1,1 @@
-Student portal configuration: main branch
+Student portal configuration: main + feature branch
