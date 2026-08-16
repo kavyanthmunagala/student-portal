@@ -56,3 +56,22 @@ After compiling the source code, execute the generated program from the project 
 
 ```bash
 ./student-portal
+
+
+Save and close TextEdit.
+
+### 3. Stage it
+
+```bash
+git add README.md
+
+cat >> README.md <<'EOF'
+
+## Project Structure
+
+- `main.cpp` — main C++ source file
+- `README.md` — project documentation
+- `.gitignore` — ignored files and build artifacts
+
+The project structure keeps the source code and documentation organized for development and version control.
+EOF
