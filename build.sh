@@ -17,7 +17,7 @@ build() {
         Settings.cpp \
         -o student-portal
 
-    echo "Build successful."
+    echo "Build successful: student-portal is ready."
 }
 
 clean() {
