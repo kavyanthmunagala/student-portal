@@ -1,7 +1,7 @@
 #ifndef STUDENT_SEARCH_H
 #define STUDENT_SEARCH_H
 
-#include "StudentRecord.h"
+#include "models/StudentRecord.h"
 #include <vector>
 
 class StudentSearch {
