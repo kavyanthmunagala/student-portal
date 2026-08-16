@@ -3,17 +3,37 @@ set -e
 
 CXX=${CXX:-g++}
 
-rm -f student-portal
+build() {
+    rm -f student-portal
 
-$CXX -std=c++17 \
-    main.cpp \
-    StudentManager.cpp \
-    StudentSearch.cpp \
-    AttendanceValidator.cpp \
-    Login.cpp \
-    Profile.cpp \
-    Dashboard.cpp \
-    Settings.cpp \
-    -o student-portal
+    $CXX -std=c++17 \
+        main.cpp \
+        StudentManager.cpp \
+        StudentSearch.cpp \
+        AttendanceValidator.cpp \
+        Login.cpp \
+        Profile.cpp \
+        Dashboard.cpp \
+        Settings.cpp \
+        -o student-portal
 
-echo "Build successful."
+    echo "Build successful."
+}
+
+clean() {
+    rm -f student-portal
+    echo "Clean successful."
+}
+
+case "${1:-build}" in
+    build)
+        build
+        ;;
+    clean)
+        clean
+        ;;
+    *)
+        echo "Usage: ./build.sh [build|clean]"
+        exit 1
+        ;;
+esac
