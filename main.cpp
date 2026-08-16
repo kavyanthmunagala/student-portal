@@ -1,5 +1,6 @@
 #include <iostream>
 #include "StudentManager.h"
+#include "AttendanceValidator.h"
 
 void printWelcomeMessage() {
     std::cout << "      Welcome to Student Portal      " << std::endl;
@@ -10,6 +11,12 @@ void displayStudent(const Student& student) {
     std::cout << "Name: " << student.name << std::endl;
     std::cout << "Course: " << student.course << std::endl;
     std::cout << "Attendance: " << student.attendance << "%" << std::endl;
+
+    if (AttendanceValidator::meetsMinimum(student.attendance)) {
+        std::cout << "Attendance Status: Eligible" << std::endl;
+    } else {
+        std::cout << "Attendance Status: Below Minimum" << std::endl;
+    }
 }
 
 int main() {
