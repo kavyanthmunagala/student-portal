@@ -12,6 +12,7 @@ public:
     void addStudent(const Student& student);
     const std::vector<Student>& getStudents() const;
     const Student* findStudentById(int id) const;
+    bool removeStudentById(int id);
 };
 
 #endif

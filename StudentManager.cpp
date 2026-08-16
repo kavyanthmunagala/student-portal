@@ -17,3 +17,14 @@ const Student* StudentManager::findStudentById(int id) const {
 
     return nullptr;
 }
+
+bool StudentManager::removeStudentById(int id) {
+    for (auto iterator = students.begin(); iterator != students.end(); ++iterator) {
+        if (iterator->id == id) {
+            students.erase(iterator);
+            return true;
+        }
+    }
+
+    return false;
+}
