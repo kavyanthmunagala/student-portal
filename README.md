@@ -11,3 +11,22 @@ The project demonstrates a basic student-oriented application while practicing G
 The project requires a C++ compiler and Git to be installed on the development machine.
 
 A C++17-compatible compiler is recommended for compiling the source code.
+
+## Build Instructions
+
+Compile the project using a C++17-compatible compiler.
+
+For example, using `g++`:
+
+```bash
+g++ -std=c++17 main.cpp -o student-portal
+
+
+Save and close TextEdit.
+
+### Check the README
+
+Run:
+
+```bash
+cat README.md
