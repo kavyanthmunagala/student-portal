@@ -1,7 +1,7 @@
 #ifndef STUDENT_MANAGER_H
 #define STUDENT_MANAGER_H
 
-#include "Student.h"
+#include "StudentRecord.h"
 #include <vector>
 
 class StudentManager {
